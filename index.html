@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LEE.IA | Tráfego pago, IA e automação para negócios locais</title>
+<meta name="description" content="A LEE.IA cuida dos seus anúncios no Meta Ads e no Google Ads e monta automações com IA para o seu negócio atender e vender mais.">
+<meta property="og:title" content="LEE.IA | Tráfego pago, IA e automação">
+<meta property="og:description" content="Anúncios no Meta Ads e no Google Ads, automações de WhatsApp e páginas que convertem, para negócios locais.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://falecomleeia.com.br/">
+<meta property="og:image" content="https://falecomleeia.com.br/favicon.jpg">
+<link rel="icon" type="image/jpeg" href="favicon.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0B0F1A;
+    --bg-2: #101830;
+    --card: #141B2D;
+    --border: #1F2A44;
+    --text: #F5F7FA;
+    --text-2: #A7B0C4;
+    --green: #7FE958;
+    --green-light: #99F457;
+    --green-dark: #5FD959;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    overflow-x: hidden;
+    color: var(--text);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+  header { padding: 28px 0; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  header img { height: 40px; width: auto; display: block; }
+  .nav-link {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--text-2); text-decoration: none;
+  }
+  .nav-link:hover { color: var(--green); }
+
+  .hero { position: relative; padding: 72px 0 96px; overflow: hidden; background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%); }
+  .hero::before {
+    content: ""; position: absolute; top: -40px; right: -80px; width: 460px; height: 460px;
+    background: radial-gradient(circle, rgba(127,233,88,.22) 0%, rgba(127,233,88,0) 65%);
+    pointer-events: none;
+  }
+  .tag {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--green); border: 1px solid var(--border); border-radius: 999px; padding: 6px 14px; margin-bottom: 28px;
+  }
+  h1 {
+    font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+    font-size: clamp(36px, 6vw, 64px); line-height: 1.08; letter-spacing: -0.02em; max-width: 15em;
+  }
+  h1 em { font-style: normal; color: var(--green); }
+  .lead { margin-top: 24px; max-width: 36em; font-size: 19px; color: var(--text-2); }
+  .cta-row { margin-top: 36px; display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+  .btn {
+    display: inline-block; background: var(--green); color: var(--bg);
+    font-weight: 700; text-decoration: none; padding: 15px 28px; border-radius: 999px;
+    box-shadow: 0 0 60px rgba(127,233,88,.25); transition: transform .15s ease, background .15s ease;
+  }
+  .btn:hover { background: var(--green-light); transform: translateY(-1px); }
+  .btn-ghost {
+    display: inline-block; color: var(--text); text-decoration: none; font-weight: 500;
+    padding: 14px 24px; border-radius: 999px; border: 1px solid var(--border);
+  }
+  .btn-ghost:hover { border-color: var(--green); color: var(--green); }
+
+  section { padding: 72px 0; border-top: 1px solid var(--border); }
+  h2 {
+    font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+    font-size: clamp(28px, 4vw, 40px); line-height: 1.15; letter-spacing: -0.01em; max-width: 18em;
+  }
+  .section-sub { margin-top: 14px; color: var(--text-2); max-width: 38em; }
+
+  .cards { margin-top: 44px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 32px 28px;
+  }
+  .card .num {
+    font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .12em; color: var(--green);
+  }
+  .card h3 {
+    font-family: 'Space Grotesk', sans-serif; font-size: 22px; margin: 14px 0 10px; line-height: 1.2;
+  }
+  .card p { color: var(--text-2); font-size: 16px; }
+  .card .line { width: 36px; height: 2px; background: var(--green); margin-top: 22px; }
+
+  .steps { margin-top: 44px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .step { border-left: 2px solid var(--green); padding-left: 20px; }
+  .step strong { display: block; font-family: 'Space Grotesk', sans-serif; font-size: 20px; margin-bottom: 6px; }
+  .step span { color: var(--text-2); font-size: 16px; }
+
+  .contact {
+    margin-top: 36px; background: var(--card); border: 1px solid var(--border); border-radius: 20px;
+    padding: 40px 32px; display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between;
+    box-shadow: 0 0 60px rgba(127,233,88,.08);
+  }
+  .contact p { color: var(--text-2); max-width: 28em; }
+  .contact .mail { font-family: 'JetBrains Mono', monospace; color: var(--green); font-size: 15px; margin-top: 8px; display: block; }
+
+  footer { border-top: 1px solid var(--border); padding: 36px 0 48px; color: var(--text-2); font-size: 14px; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 32px; justify-content: space-between; }
+  footer a { color: var(--text-2); }
+  footer a:hover { color: var(--green); }
+  .legal { margin-top: 18px; font-size: 13px; max-width: 54em; }
+
+  @media (max-width: 800px) {
+    .cards, .steps { grid-template-columns: 1fr; }
+    .hero { padding: 48px 0 64px; }
+    section { padding: 56px 0; }
+    body { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <img src="logo-lee-ia.png" alt="LEE.IA">
+    <a class="nav-link" href="#contato">Contato</a>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <span class="tag">Tráfego pago &middot; IA &middot; Automação</span>
+      <h1>Anúncios que trazem cliente e <em>automações</em> que cuidam do resto.</h1>
+      <p class="lead">A LEE.IA gerencia os anúncios do seu negócio no Meta Ads e no Google Ads e monta automações com inteligência artificial para você atender mais gente sem ficar preso ao celular.</p>
+      <div class="cta-row">
+        <a class="btn" href="mailto:leonardo@falecomleeia.com.br?subject=Quero%20conversar%20sobre%20meus%20an%C3%BAncios">Falar com a LEE.IA</a>
+        <a class="btn-ghost" href="#servicos">Ver o que fazemos</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="servicos">
+    <div class="wrap">
+      <h2>Três frentes para o seu negócio local vender mais.</h2>
+      <p class="section-sub">Cada serviço funciona sozinho ou junto com os outros. Você escolhe o que faz sentido para o seu momento.</p>
+      <div class="cards">
+        <div class="card">
+          <span class="num">01</span>
+          <h3>Gestão de tráfego pago</h3>
+          <p>Criação, acompanhamento e otimização das suas campanhas no Meta Ads (Facebook e Instagram) e no Google Ads, com relatório mensal em linguagem simples.</p>
+          <div class="line"></div>
+        </div>
+        <div class="card">
+          <span class="num">02</span>
+          <h3>Automação e chatbot</h3>
+          <p>Atendimento no WhatsApp com inteligência artificial, respostas rápidas e rotinas que tiram o trabalho repetitivo da sua mão.</p>
+          <div class="line"></div>
+        </div>
+        <div class="card">
+          <span class="num">03</span>
+          <h3>Páginas que convertem</h3>
+          <p>Páginas simples e rápidas, com botão de WhatsApp e rastreamento, para o anúncio levar o cliente direto até você.</p>
+          <div class="line"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="como">
+    <div class="wrap">
+      <h2>Como a gente trabalha.</h2>
+      <div class="steps">
+        <div class="step">
+          <strong>Conversa e diagnóstico</strong>
+          <span>A gente olha o seu negócio, a sua conta de anúncios e o que os concorrentes da sua cidade estão fazendo.</span>
+        </div>
+        <div class="step">
+          <strong>Campanha no ar</strong>
+          <span>Estrutura enxuta, criativos alinhados com a sua marca e rastreamento conferido antes de gastar o primeiro real.</span>
+        </div>
+        <div class="step">
+          <strong>Acompanhamento de perto</strong>
+          <span>Otimização toda semana e um resumo mensal claro: quanto investiu, quantas conversas vieram e o que muda no próximo mês.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="wrap">
+      <h2>Quer saber o que dá para fazer pelo seu negócio?</h2>
+      <p class="section-sub">Me conta rapidinho o que você vende e onde atende. Eu olho o seu caso e respondo com o que faz sentido, sem compromisso.</p>
+      <div class="contact">
+        <div>
+          <p>Escreva para o Leonardo, responsável pela LEE.IA:</p>
+          <a class="mail" href="mailto:leonardo@falecomleeia.com.br">leonardo@falecomleeia.com.br</a>
+        </div>
+        <a class="btn" href="mailto:leonardo@falecomleeia.com.br?subject=Quero%20conversar%20sobre%20meus%20an%C3%BAncios">Enviar e-mail</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>LEE.IA &middot; Leonardo Oliveira &middot; Brasil</span>
+    <span>
+      <a href="mailto:leonardo@falecomleeia.com.br">leonardo@falecomleeia.com.br</a>
+      &nbsp;&middot;&nbsp;
+      <a href="https://www.instagram.com/lee.ia.ads/" target="_blank" rel="noopener">@lee.ia.ads</a>
+    </span>
+  </div>
+  <div class="wrap">
+    <p class="legal">Este site pertence à LEE.IA e é usado como endereço para os e-mails e contatos comerciais enviados por <strong>leonardo@falecomleeia.com.br</strong>. Se você recebeu uma mensagem nossa e não quer receber mais, responda com a palavra "sair" e a gente para na hora. Usamos apenas dados públicos de empresas para o contato comercial.</p>
+  </div>
+</footer>
+
+</body>
+</html>
